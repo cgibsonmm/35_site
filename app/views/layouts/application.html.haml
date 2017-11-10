@@ -8,4 +8,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'parts/navbar'
-    = yield
+    #mainIndex.container
+      = yield
+      .container-fluid
+        .row
+          %p hello this is a new rom
