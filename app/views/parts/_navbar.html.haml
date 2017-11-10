@@ -1,17 +1,24 @@
-%nav.navbar.navbar-light.navbar-expand-md.navbar-custom
+%nav.navbar.navbar-light.navbar-expand-md.d-flex
   .container
-    %a.navbar-brand{href: "#"} APetsLyfe
-    %button.navbar-toggler{'type': 'button', 'data-toggle': 'collapse', 'data-target': 'mainNav',
+    %a#brandName.navbar-brand{href: "#"} APetsLyfe
+    %button.navbar-toggler{'type': 'button', 'data-toggle': 'collapse', 'data-target': '#mainNav',
                            'aria-controls': 'mainNav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation'}
       %span.navbar-toggler-icon
     #mainNav.collapse.navbar-collapse
+      .navbar-nav.mr-auto
+        %a.nav-item.nav-link.px-3{:href => "#"} Home
+        %a.nav-item.nav-link.px-3{:href => "#"} Pets Profile
+        .nav-item.dropdown.px-3
+          %a#dropToggle.nav-link.dropdown-toggle{:href => "#", 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false'} Services
+          .dropdown-menu{'aria-labelledby': 'dropToggle'}
+            %a.dropdown-item{:href => "#"} Animal Hospitals
+            %a.dropdown-item{href: '#'} Kennels
+            %a.dropdown-item{href: '#'} Grooming
+            %a.dropdown-item{href: '#'} Dog Walking
       .navbar-nav
-        %a.nav-item.nav-link{:href => "#"} Home
-        %a.nav-item.nav-link{:href => "#"} Pets Profile
-        .dropdown
-          %a.nav-item.nav-link.dropdown-toggle{:href => "#"} Services
-          %a.dropdown-menu
-            %a.dropdown-item{:href => "/"} Vet
-        %a.nav-item.nav-link{:href => "#"} My Account
-        %a.nav-item.nav-link{:href => "#"} Sign Up
-        %a.nav-item.nav-link{:href => "#"} Sign Out
+        .nav-item.dropdown
+          %a.nav-link.dropdown-toggle{'data-toggle': 'dropdown', :href => "#"} My Account
+          .dropdown-menu
+            %a.dropdown-item{:href => "#"} Account settings
+            %a.dropdown-item{:href => "#"} hello
+            %a.dropdown-item{:href => "#"} hello
