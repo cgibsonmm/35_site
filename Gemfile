@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'haml'
 gem "haml-rails", "~> 1.0"
+gem 'devise'
 
 
 group :development, :test do

@@ -8,8 +8,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'parts/navbar'
+    = render 'parts/flash'
+    
+    // main yield
     #mainIndex.container.p-0
       = yield
+      
+      // placeholder
       .row.pt-5
         .col-12
           %h2.text-center website info placeholder
