@@ -18,6 +18,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'haml'
 gem "haml-rails", "~> 1.0"
 gem 'devise'
+gem 'simple_form'
 
 
 group :development, :test do

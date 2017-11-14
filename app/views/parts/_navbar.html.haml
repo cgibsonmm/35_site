@@ -6,7 +6,7 @@
       %span.navbar-toggler-icon
     #mainNav.collapse.navbar-collapse
       .navbar-nav.mr-auto
-        %a.nav-item.nav-link.px-3{:href => "#"} Home
+        %a.nav-item.nav-link.px-3{:href => root_path} Home
         %a.nav-item.nav-link.px-3{:href => "#"} Pets Profile
         .nav-item.dropdown.px-3
           %a#dropToggle.nav-link.dropdown-toggle{:href => "#", 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false'} Services
@@ -20,5 +20,11 @@
           %a.nav-link.dropdown-toggle{'data-toggle': 'dropdown', :href => "#"} My Account
           .dropdown-menu
             %a.dropdown-item{:href => "#"} Account settings
-            %a.dropdown-item{:href => "#"} hello
-            %a.dropdown-item{:href => "#"} hello
+      - if user_signed_in?
+        .nav-item
+          = button_to "Log Out", destroy_user_session_path, class: "btn btn-info"
+      - else
+        .nav-item
+          = button_to "Sign In", new_user_session_path, class: "btn btn-danger", method: 'get'
+        .nav-item
+          = button_to "Sign Up", new_user_registration_path, class: "btn btn-success", method: 'get'
