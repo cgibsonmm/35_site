@@ -22,7 +22,7 @@
             %a.dropdown-item{:href => "#"} Account settings
       - if user_signed_in?
         .nav-item
-          = button_to "Log Out", destroy_user_session_path, class: "btn btn-info"
+          = button_to "Log Out", destroy_user_session_path, class: "btn btn-info", method: 'delete'
       - else
         .nav-item
           = button_to "Sign In", new_user_session_path, class: "btn btn-danger", method: 'get'

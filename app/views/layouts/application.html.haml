@@ -11,8 +11,4 @@
     = render 'parts/flash'
     
     .container.p-0
-      - if user_signed_in?
-        // main yield
-        = yield
-      - else
-        = render 'parts/not_signed_in'
+      = yield
