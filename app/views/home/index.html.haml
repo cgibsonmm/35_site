@@ -1,24 +1,6 @@
+if user_signed_in?
 .container-fluid
-  .row
-    #PetsOfWeek.carousel.slide.col-md-8.bg-danger{'data-ride': "carousel"}
-      .carousel-inner
-        .carousel-item.active
-          = image_tag (''), class: 'd-block w-75 mw-75 img-fluid', alt: 'test img'
-        .carousel-item
-          = image_tag (''), class: 'd-block w-75 mw-75 img-fluid', alt: 'test img'
-        .carousel-item
-          = image_tag (''), class: 'd-block w-75 mw-75 img-fluid', alt: 'test img'
-    .col-6.col-md-2.p-0
-      .boxes
-        = image_tag ('bg.png'), class: 'img-fluid'
-      .boxes
-        = image_tag ('bg.png'), class: 'img-fluid'
-    .col-6.col-md-2.p-0
-      .boxes
-        = image_tag ('bg.png'), class: 'img-fluid'
-      .boxes
-        = image_tag ('bg.png'), class: 'img-fluid'
-  
+  = render 'parts/photo_container'
   .row 
     - unless user_signed_in?
       // placeholder
