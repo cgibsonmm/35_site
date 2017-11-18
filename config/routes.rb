@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'my_profile/show'
-
-  get 'my_profile/edit'
+  resources :my_profile, except: [:index]
 
   devise_for :users
   root 'home#index'
